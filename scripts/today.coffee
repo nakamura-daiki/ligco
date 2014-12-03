@@ -28,7 +28,7 @@ module.exports = (robot) ->
             month: day_info.getMonth()+1
             day:day_info.getDate()
         }
-        console.log today
+        # console.log today
         today.get (to.month+'/'+to.day), (body) ->
             return msg.send 'No today No Life' if body is no
             kinenbi_list = body.feed.kinenbi[0].item
